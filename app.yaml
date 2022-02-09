@@ -1,0 +1,18 @@
+# https://cloud.google.com/appengine/docs/standard/python/config/appref
+runtime: nodejs14
+service: default
+env_variables:
+  WEB_URL: "https://stg.co-bee.com"
+  STORAGE_BUCKET: "gs://co-bee-stg.appspot.com"
+  JWT_CERT_PATH: "./jwt-cert/jwt-stg.crt"
+  JWT_PRIVATE_KEY_PATH: "./jwt-cert/jwt-stg.key"
+  JWT_TOKEN_PERIOD: 604800
+  FIRESTORE_CRED_PATH: "../service-accounts/firestore-editor-stg.json"
+  LOCKED_TIME_COEFFICIENT: 5
+  ALLOW_LOGIN_RETRIES: 4
+  RESET_PASSWORD_PERIOD: 300
+  NO_TLS: 1
+  COLLECTION_PREFIX: ""
+basic_scaling:
+  max_instances: 2
+  idle_timeout: 5m

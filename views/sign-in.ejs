@@ -1,0 +1,32 @@
+<head>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <style>
+        div.a {
+            text-align: center;
+        }
+    </style>
+    <div class="container">
+        <a href="/">
+            <h6 class="text-secondary">Home</h6>
+        </a>
+        <h2>SIGN IN</h2>
+        <form action="/api/auth/signin/<%=  %>" method="POST">
+            <div class="form-group">
+                <label>User name</label>
+                <input class="form-control col-sm-5" type="text" name='username' value="">
+            </div>
+            <div class="form-group">
+                <label> Password </label>
+                <a href="/forget-pass"><h11 class="text-secondary font-italic"> (Foget password)</h11></a>
+                
+                <input class="form-control col-sm-5" type="text" name='password' value="">
+            </div>
+            <input id="sigi-up-btn" class="btn btn-secondary" type="submit" value="SIGN IN">
+        </form> 
+    </div>
+</body>
